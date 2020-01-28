@@ -1,6 +1,33 @@
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
@@ -106,7 +133,7 @@
 							<p>
 								At holinic, we don't believe in magic pills or one-size-fits-all solutions. We know that the reason you haven't reached your beauty goals is because no one understands that struggles are unique. Your appearance is the result of a multitude of factors, so no single products or treatment is ever the right cure for your concerns. If you're tired of trying out one miracle solution after the other just to be disappointed over and over again, it's time to tackle your problems holistically.
 							</p>
-							<button href="#core-feature-bottom-area" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">What We Offer</span><span class="lnr lnr-arrow-right"></span></button>
+							<a href="#hgl" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">What We Offer</span><span class="lnr lnr-arrow-right"></span></a>
 						</div>
 						<div class="col-lg-5 core-feature-right">
 							<div class="active-feature-carousel">
@@ -138,7 +165,7 @@
 						</div>
 						<div class="col-lg-6 core2-right">
 						
-							<h2>
+							<h2 id="hgl">
 								<span>Hair Growth Lab</span><br>
 	    						Our 6-week Program to <span>reach your hair goals.</span>
 							</h2>
